@@ -1,0 +1,682 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #120d0a;
+    color: #fffaf5;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(18, 13, 10, 0.96);
+    border-bottom: 1px solid #33251c;
+}
+
+.navbar {
+    position: relative;
+
+    max-width: 1150px;
+    margin: auto;
+
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #e6a04d;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 800;
+
+    font-family: Georgia, serif;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fffaf5;
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #e6a04d;
+}
+
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    color: #fffaf5;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    padding: 4px 8px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    padding: 70px 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(18, 13, 10, 0.68),
+            rgba(18, 13, 10, 0.78)
+        ),
+        url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-label,
+.section-label {
+    color: #e6a04d;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(44px, 7vw, 78px);
+
+    line-height: 1.03;
+
+    font-family: Georgia, serif;
+
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    max-width: 700px;
+
+    color: #eadfd5;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+    width: 100%;
+
+    margin-top: 35px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    min-width: 155px;
+
+    padding: 13px 24px;
+
+    background: #e6a04d;
+    color: #20140d;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.92;
+}
+
+.secondary-btn {
+    background: transparent;
+
+    color: #fffaf5;
+
+    border: 1px solid #e6a04d;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 95px 25px;
+
+    text-align: center;
+}
+
+.section h2 {
+    font-family: Georgia, serif;
+
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.section-description {
+    max-width: 780px;
+
+    margin: auto;
+
+    color: #cdbfb4;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu-grid {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+
+    text-align: left;
+}
+
+.menu-card {
+    padding: 28px;
+
+    background: #1b120d;
+
+    border: 1px solid #33251c;
+
+    border-radius: 15px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #e6a04d;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.28);
+}
+
+.food-icon {
+    font-size: 46px;
+
+    margin-bottom: 12px;
+}
+
+.menu-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #cdbfb4;
+
+    margin-bottom: 18px;
+}
+
+.price {
+    color: #e6a04d;
+
+    font-size: 22px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-grid {
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    background: #1b120d;
+
+    border: 1px solid #33251c;
+
+    border-radius: 15px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #e6a04d;
+}
+
+.feature-icon {
+    font-size: 42px;
+
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #cdbfb4;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    padding: 90px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(30, 18, 10, 0.88),
+            rgba(30, 18, 10, 0.88)
+        ),
+        url("https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.cta-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.cta-section h2 {
+    font-family: Georgia, serif;
+
+    font-size: 44px;
+
+    margin-bottom: 15px;
+}
+
+.cta-section p:not(.section-label) {
+    color: #eadfd5;
+
+    margin-bottom: 28px;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-details {
+    margin: 28px 0;
+}
+
+.contact-details p {
+    margin: 10px 0;
+
+    color: #cdbfb4;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp-btn {
+    position: fixed;
+
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 999;
+
+    padding: 14px 20px;
+
+    background: #25d366;
+    color: #ffffff;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-3px);
+
+    opacity: 0.9;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #0c0806;
+
+    color: #8f8178;
+}
+
+
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: row;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        background: #120d0a;
+
+        border-top: 1px solid #33251c;
+
+        padding: 10px 0;
+
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+
+        padding: 14px 20px;
+    }
+
+    .nav-links a:hover {
+        background: #1b120d;
+    }
+
+
+    /* Menu */
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Features */
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 82vh;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+
+    /* Buttons */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+    }
+
+
+    /* Sections */
+
+    .section {
+        padding: 70px 20px;
+    }
+
+    .section h2 {
+        font-size: 34px;
+    }
+
+
+    /* CTA */
+
+    .cta-section h2 {
+        font-size: 36px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 16px 18px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .menu-toggle {
+        font-size: 28px;
+    }
+
+
+    .hero {
+        padding: 50px 18px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+
+    .section {
+        padding: 60px 18px;
+    }
+
+    .section h2 {
+        font-size: 30px;
+    }
+
+
+    .menu-card,
+    .feature-card {
+        padding: 24px 20px;
+    }
+
+
+    .cta-section {
+        padding: 70px 18px;
+    }
+
+    .cta-section h2 {
+        font-size: 32px;
+    }
+
+
+    .whatsapp-btn {
+        right: 15px;
+        bottom: 15px;
+
+        padding: 12px 17px;
+
+        font-size: 14px;
+    }
+}
